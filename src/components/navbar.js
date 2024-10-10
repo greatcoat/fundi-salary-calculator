@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="logo">
         {/* Replace this with an actual logo image if needed */}
-        <a href="/">Logo</a>
+        <a href="/">Fundi</a>
       </div>
       <ul className="nav-links">
         <li>
@@ -18,7 +18,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
             className="cta-button"
           >
-            Get Started
+            Hire Marketers
           </a>
         </li>
       </ul>

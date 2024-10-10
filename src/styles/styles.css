@@ -47,18 +47,49 @@ body {
 
 /* CTA Button */
 .cta-button {
-  padding: 10px 20px;
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  color: #fff!important;
   background-color: #007aff;
-  color: white;
   border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
   background-color: #005ecb;
+}
+
+/* Hero Section */
+.hero-section {
+  width: 100%;
+  height: 400px; /* Adjust height as needed */
+  background: linear-gradient(135deg, #007aff, #00e4ff); /* Colorful background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px; /* Add padding to ensure text doesn't touch the edges */
+}
+
+.hero-content {
+  max-width: 1080px; /* Restrict width for readability */
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin: auto;
+  max-width: 800px;
 }
 
 /* Container */
@@ -201,11 +232,145 @@ input[type="range"]::-moz-range-thumb {
   flex-shrink: 0;  /* Prevent the value text from shrinking */
 }
 
-/* Responsive Styles for Mobile */
+/* FAQ Section */
+.faq-section {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: left;
+}
+
+.faq-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.faq-list {
+  border-top: 1px solid #ddd;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+  cursor: pointer;  /* Make the entire item clickable */
+  transition: background-color 0.3s ease;
+}
+
+.faq-item:hover {
+  background-color: #f0f0f0;  /* Add a subtle hover effect */
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.faq-item.active .faq-question {
+  color: #007aff;  /* Change color when active */
+}
+
+/* Plus/Minus Icon */
+.faq-icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.faq-icon::before,
+.faq-icon::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #007aff;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.faq-icon::before {
+  transform: rotate(0); /* Vertical line of plus */
+}
+
+.faq-icon::after {
+  transform: rotate(90deg); /* Horizontal line of plus */
+}
+
+.faq-item.active .faq-icon::before {
+  opacity: 0; /* Hide vertical line to turn plus into minus */
+}
+
+.faq-item.active .faq-icon::after {
+  transform: rotate(0); /* Horizontal line becomes minus */
+}
+
+/* FAQ Answer */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+.faq-answer p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  padding: 10px 0;
+}
+
+.faq-item.active .faq-answer {
+  opacity: 1;
+  max-height: 500px; /* Adjust height as needed */
+}
+
+/* Footer Styles */
+.footer {
+  width: 100%;
+  padding: 20px;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: #333;
+  font-size: 14px;
+  margin-top: 50px;
+}
+
+.footer a {
+  color: #007aff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #005ecb;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links span {
+  margin: 0 5px;
+  color: #999;
+}
+
+/* Responsive Navbar */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .nav-links {
@@ -214,14 +379,107 @@ input[type="range"]::-moz-range-thumb {
   }
 
   .cta-button {
+    width: 100%;  /* Ensure button takes full width on mobile */
     margin-top: 10px;
+    text-align: center;
+  }
+
+  .logo a {
+    font-size: 20px; /* Slightly reduce logo font size for mobile */
   }
 }
 
+/* Responsive Hero Section */
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;  /* Allow height to adjust */
+    padding: 40px 20px;
+    max-width: 100%;  /* Ensure the section doesn't exceed the screen width */
+    box-sizing: border-box;  /* Make sure padding is included in the element width */
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;  /* Reduce heading size */
+    word-wrap: break-word;  /* Ensure long words break and don't cause overflow */
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+    max-width: 100%;  /* Ensure the paragraph fits within the screen width */
+    word-wrap: break-word;  /* Prevent overflow from long text */
+  }
+}
+
+/* Responsive Salary Calculator */
 @media (max-width: 768px) {
   .container {
-    margin: 20px auto;  /* Keep the auto value to center it, add 20px of margin for top and bottom */
-    padding: 15px;  /* Padding for internal spacing */
-    max-width: calc(100% - 44px);  /* Ensure the container doesn’t touch the screen edges */
+    padding: 20px 15px;  /* Ensure consistent padding on mobile */
+    max-width: calc(100% - 44px);  /* Prevent the container from touching the screen edges */
+  }
+
+  .form-group label {
+    font-size: 14px;  /* Adjust label size for mobile */
+  }
+
+  .input-field {
+    padding: 10px;
+    font-size: 14px;  /* Slightly smaller input field text for mobile */
+  }
+
+  .button {
+    padding: 12px;
+    font-size: 14px;  /* Reduce button size slightly for mobile */
+  }
+
+  .slider-container {
+    flex-direction: column;  /* Stack the slider and value vertically on mobile */
+    gap: 5px;  /* Adjust gap for stacked layout */
+  }
+
+  .slider-value {
+    text-align: left;  /* Align value to the left on mobile */
+    font-size: 14px;  /* Adjust text size */
+  }
+}
+
+/* Responsive FAQ Section */
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 20px 15px;  /* Adjust padding for mobile */
+    max-width: 100%;  /* Ensure full width on mobile */
+  }
+
+  .faq-section h2 {
+    font-size: 1.75rem;  /* Reduce heading size slightly */
+  }
+
+  .faq-question {
+    font-size: 1.125rem;  /* Slightly smaller font size for mobile */
+  }
+
+  .faq-answer p {
+    font-size: 0.9rem;  /* Reduce paragraph text size for mobile */
+  }
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 15px;  /* Adjust padding for mobile */
+    max-width: 100%;  /* Ensure container doesn't exceed screen width */
+    box-sizing: border-box;  /* Include padding and border in width calculations */
+  }
+
+  .footer p {
+    font-size: 12px;  /* Adjust font size for readability */
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 5px;  /* Stack links vertically on mobile */
+  }
+
+  .footer-links a {
+    font-size: 14px;  /* Adjust link size for mobile */
   }
 }
