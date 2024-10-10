@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/fundi-salary-calculator/static/css/main.240d90e1.css",
-    "main.js": "/fundi-salary-calculator/static/js/main.8c568fee.js",
+    "main.css": "/fundi-salary-calculator/static/css/main.590943eb.css",
+    "main.js": "/fundi-salary-calculator/static/js/main.c4f6317a.js",
     "index.html": "/fundi-salary-calculator/index.html",
-    "main.240d90e1.css.map": "/fundi-salary-calculator/static/css/main.240d90e1.css.map",
-    "main.8c568fee.js.map": "/fundi-salary-calculator/static/js/main.8c568fee.js.map"
+    "main.590943eb.css.map": "/fundi-salary-calculator/static/css/main.590943eb.css.map",
+    "main.c4f6317a.js.map": "/fundi-salary-calculator/static/js/main.c4f6317a.js.map"
   },
   "entrypoints": [
-    "static/css/main.240d90e1.css",
-    "static/js/main.8c568fee.js"
+    "static/css/main.590943eb.css",
+    "static/js/main.c4f6317a.js"
   ]
 }
