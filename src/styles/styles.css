@@ -145,3 +145,12 @@ input[type="range"]::-moz-range-thumb {
   text-align: right;
   flex-shrink: 0;  /* Prevent the value text from shrinking */
 }
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+  .container {
+    margin: 20px auto;  /* Keep the auto value to center it, add 20px of margin for top and bottom */
+    padding: 15px;  /* Padding for internal spacing */
+    max-width: calc(100% - 44px);  /* Ensure the container doesn’t touch the screen edges */
+  }
+}
