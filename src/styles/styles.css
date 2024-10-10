@@ -6,7 +6,7 @@ body {
   color: #333;
 }
 
-/* Navbar container */
+/* Navbar Container */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -20,6 +20,17 @@ body {
 }
 
 /* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo svg {
+  width: 150px;  /* Adjust width as needed */
+  height: auto;
+}
+
+/* Logo */
 .logo a {
   font-size: 24px;
   font-weight: bold;
@@ -27,7 +38,7 @@ body {
   color: #007aff;
 }
 
-/* Navigation Links */
+/* Regular Navigation Links (Desktop Only) */
 .nav-links {
   list-style: none;
   display: flex;
@@ -43,6 +54,100 @@ body {
 
 .nav-links li a:hover {
   color: #007aff;
+}
+
+/* Burger Menu Icon */
+.burger-menu {
+  display: none;  /* Hidden on desktop */
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Slide-in Mobile Menu (Hidden by Default on Desktop) */
+.side-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* Show the burger icon on mobile */
+  .burger-menu {
+    display: block;  /* Show the burger menu on mobile */
+    margin-left: auto;  /* Align the burger menu to the right */
+  }
+
+  .nav-links {
+    display: none!important;  /* Hide regular nav links on mobile */
+  }
+
+  /* Show the side menu on mobile */
+  .side-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;  /* Initially offscreen */
+    height: 100%;
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;  /* Smooth slide-in */
+    z-index: 1001;
+    display: block;  /* Make sure the side-menu is shown */
+  }
+
+  .side-menu.open {
+    left: 0;  /* Slide in when open */
+  }
+
+  .side-menu ul {
+    list-style: none;
+    padding: 20px;
+  }
+
+  .side-menu ul li {
+    margin-bottom: 20px;
+  }
+
+  .side-menu ul li a {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .side-menu ul li a:hover {
+    color: #007aff;
+  }
+}
+
+/* Regular Navigation Links (Desktop Only) */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #007aff;
+}
+
+.nav-links li .cta-button {
+  padding: 10px 20px;
+  background-color: #007aff;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links li .cta-button:hover {
+  background-color: #005ecb;
 }
 
 /* CTA Button */
@@ -65,18 +170,24 @@ body {
 /* Hero Section */
 .hero-section {
   width: 100%;
-  height: 400px; /* Adjust height as needed */
-  background: linear-gradient(135deg, #007aff, #00e4ff); /* Colorful background */
+  height: 400px;  /* Adjust height as needed */
+  background: linear-gradient(135deg, #007aff, #00e4ff);  /* Colorful background */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
-  padding: 0 20px; /* Add padding to ensure text doesn't touch the edges */
+  padding: 0 20px;  /* Add padding to ensure text doesn't touch the edges */
+  box-sizing: border-box;  /* Include padding in width calculation */
+  overflow-x: hidden;  /* Prevent horizontal overflow */
 }
 
+/* Hero Content */
 .hero-content {
   max-width: 1080px; /* Restrict width for readability */
+  width: 100%;  /* Make sure it doesn't overflow */
+  box-sizing: border-box;
+  padding: 0 20px; /* Ensure internal padding is accounted for */
 }
 
 .hero-section h1 {
@@ -344,6 +455,15 @@ input[type="range"]::-moz-range-thumb {
   color: #333;
   font-size: 14px;
   margin-top: 50px;
+  box-sizing: border-box;  /* Include padding in width calculation */
+  overflow-x: hidden;  /* Prevent horizontal overflow */
+}
+
+/* Footer Links */
+.footer-links {
+  margin-top: 10px;
+  display: inline-block;  /* Ensure the links don't stretch */
+  box-sizing: border-box;  /* Include padding in width */
 }
 
 .footer a {
@@ -357,10 +477,6 @@ input[type="range"]::-moz-range-thumb {
   color: #005ecb;
 }
 
-.footer-links {
-  margin-top: 10px;
-}
-
 .footer-links span {
   margin: 0 5px;
   color: #999;
@@ -369,8 +485,10 @@ input[type="range"]::-moz-range-thumb {
 /* Responsive Navbar */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
+    display: flex;
+    justify-content: space-between;  /* Ensure logo on left and menu on right */
     align-items: center;
+    padding: 15px 20px;
   }
 
   .nav-links {
@@ -387,26 +505,28 @@ input[type="range"]::-moz-range-thumb {
   .logo a {
     font-size: 20px; /* Slightly reduce logo font size for mobile */
   }
+  
+  .logo svg {
+    width: 120px;  /* Adjust width for mobile */
+  }
 }
 
 /* Responsive Hero Section */
 @media (max-width: 768px) {
   .hero-section {
-    height: auto;  /* Allow height to adjust */
+    height: auto;  /* Allow height to adjust based on content */
     padding: 40px 20px;
-    max-width: 100%;  /* Ensure the section doesn't exceed the screen width */
-    box-sizing: border-box;  /* Make sure padding is included in the element width */
   }
 
   .hero-section h1 {
-    font-size: 2rem;  /* Reduce heading size */
+    font-size: 2rem;
     word-wrap: break-word;  /* Ensure long words break and don't cause overflow */
   }
 
   .hero-section p {
     font-size: 1rem;
-    max-width: 100%;  /* Ensure the paragraph fits within the screen width */
-    word-wrap: break-word;  /* Prevent overflow from long text */
+    max-width: 100%;
+    word-wrap: break-word;
   }
 }
 
@@ -465,21 +585,20 @@ input[type="range"]::-moz-range-thumb {
 /* Responsive Footer */
 @media (max-width: 768px) {
   .footer {
-    padding: 20px 15px;  /* Adjust padding for mobile */
-    max-width: 100%;  /* Ensure container doesn't exceed screen width */
-    box-sizing: border-box;  /* Include padding and border in width calculations */
+    padding: 20px 15px;
+    box-sizing: border-box;
   }
 
   .footer p {
-    font-size: 12px;  /* Adjust font size for readability */
+    font-size: 12px;
   }
 
   .footer-links {
     flex-direction: column;
-    gap: 5px;  /* Stack links vertically on mobile */
+    gap: 5px;
   }
 
   .footer-links a {
-    font-size: 14px;  /* Adjust link size for mobile */
+    font-size: 14px;
   }
 }
