@@ -26,7 +26,8 @@ body {
 }
 
 .logo svg {
-  width: 150px;  /* Adjust width as needed */
+  width: 150px;
+  /* Adjust width as needed */
   height: auto;
 }
 
@@ -69,7 +70,7 @@ body {
 
 .nav-links li .cta-button {
   padding: 10px 20px;
-  background-color: #007aff;
+  background-color: #0500e0;
   color: #fff;
   border-radius: 8px;
   text-decoration: none;
@@ -78,7 +79,7 @@ body {
 }
 
 .nav-links li .cta-button:hover {
-  background-color: #005ecb;
+  background-color: #007aff;
 }
 
 /* CTA Button */
@@ -86,8 +87,8 @@ body {
   width: 100%;
   padding: 14px;
   font-size: 16px;
-  color: #fff!important;
-  background-color: #007aff;
+  color: #fff !important;
+  background-color: #0500e0;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -95,12 +96,13 @@ body {
 }
 
 .cta-button:hover {
-  background-color: #005ecb;
+  background-color: #007aff;
 }
 
 /* Burger Menu Icon */
 .burger-menu {
-  display: none;  /* Hidden on desktop */
+  display: none;
+  /* Hidden on desktop */
   font-size: 28px;
   cursor: pointer;
 }
@@ -111,32 +113,40 @@ body {
 }
 
 @media (max-width: 768px) {
+
   /* Show the burger icon on mobile */
   .burger-menu {
-    display: block;  /* Show the burger menu on mobile */
-    margin-left: auto;  /* Align the burger menu to the right */
+    display: block;
+    /* Show the burger menu on mobile */
+    margin-left: auto;
+    /* Align the burger menu to the right */
   }
 
   .nav-links {
-    display: none!important;  /* Hide regular nav links on mobile */
+    display: none !important;
+    /* Hide regular nav links on mobile */
   }
 
   /* Show the side menu on mobile */
   .side-menu {
     position: fixed;
     top: 0;
-    left: -100%;  /* Initially offscreen */
+    left: -100%;
+    /* Initially offscreen */
     height: 100%;
     width: 250px;
     background-color: #fff;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    transition: left 0.3s ease;  /* Smooth slide-in */
+    transition: left 0.3s ease;
+    /* Smooth slide-in */
     z-index: 1001;
-    display: block;  /* Make sure the side-menu is shown */
+    display: block;
+    /* Make sure the side-menu is shown */
   }
 
   .side-menu.open {
-    left: 0;  /* Slide in when open */
+    left: 0;
+    /* Slide in when open */
   }
 
   .side-menu ul {
@@ -163,24 +173,32 @@ body {
 /* Hero Section */
 .hero-section {
   width: 100%;
-  height: 400px;  /* Adjust height as needed */
-  background: linear-gradient(135deg, #007aff, #00e4ff);  /* Colorful background */
+  height: 400px;
+  /* Adjust height as needed */
+  background: linear-gradient(135deg, #007aff, #00e4ff);
+  /* Colorful background */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
-  padding: 0 20px;  /* Add padding to ensure text doesn't touch the edges */
-  box-sizing: border-box;  /* Include padding in width calculation */
-  overflow-x: hidden;  /* Prevent horizontal overflow */
+  padding: 0 20px;
+  /* Add padding to ensure text doesn't touch the edges */
+  box-sizing: border-box;
+  /* Include padding in width calculation */
+  overflow-x: hidden;
+  /* Prevent horizontal overflow */
 }
 
 /* Hero Content */
 .hero-content {
-  max-width: 1080px; /* Restrict width for readability */
-  width: 100%;  /* Make sure it doesn't overflow */
+  max-width: 1080px;
+  /* Restrict width for readability */
+  width: 100%;
+  /* Make sure it doesn't overflow */
   box-sizing: border-box;
-  padding: 0 20px; /* Ensure internal padding is accounted for */
+  padding: 0 20px;
+  /* Ensure internal padding is accounted for */
 }
 
 .hero-section h1 {
@@ -205,7 +223,8 @@ body {
 
 .hero-cta {
   width: auto;
-  max-width: 200px; /* Adjust this value as needed */
+  max-width: 200px;
+  /* Adjust this value as needed */
   text-decoration: none;
 }
 
@@ -320,18 +339,21 @@ input[type="range"] {
 }
 
 input[type="range"]:hover {
-  opacity: 1;  /* Full opacity on hover */
+  opacity: 1;
+  /* Full opacity on hover */
 }
 
 input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;  /* Override default look */
+  -webkit-appearance: none;
+  /* Override default look */
   appearance: none;
   width: 20px;
   height: 20px;
   background: #007aff;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);  /* Soft shadow for thumb */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  /* Soft shadow for thumb */
 }
 
 input[type="range"]::-moz-range-thumb {
@@ -344,7 +366,8 @@ input[type="range"]::-moz-range-thumb {
 
 /* Ensure the blue fill updates dynamically */
 input[type="range"].slider-progress {
-  background: linear-gradient(to right, #007aff var(--progress), #ddd var(--progress));  /* Dynamically controlled fill */
+  background: linear-gradient(to right, #007aff var(--progress), #ddd var(--progress));
+  /* Dynamically controlled fill */
 }
 
 /* Styling the slider value (years) */
@@ -360,13 +383,16 @@ input[type="range"].slider-progress {
 .salary-display {
   margin-top: 24px;
   font-size: 24px;
-  font-weight: normal;  /* Set normal weight for text */
+  font-weight: normal;
+  /* Set normal weight for text */
   text-align: center;
-  color: #333;  /* Set text color to black */
+  color: #333;
+  /* Set text color to black */
   background-color: #f9f9f9;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  /* Soft shadow for depth */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  /* Soft shadow for depth */
   transition: transform 0.3s ease;
 }
 
@@ -375,8 +401,10 @@ input[type="range"].slider-progress {
 }
 
 .salary-display p span {
-  font-weight: bold;  /* Bold the numerical value */
-  color: #0500e0;  /* Slightly highlight the number in blue */
+  font-weight: bold;
+  /* Bold the numerical value */
+  color: #0500e0;
+  /* Slightly highlight the number in blue */
 }
 
 /* FAQ Section */
@@ -402,12 +430,14 @@ input[type="range"].slider-progress {
 .faq-item {
   border-bottom: 1px solid #ddd;
   padding: 20px 0;
-  cursor: pointer;  /* Make the entire item clickable */
+  cursor: pointer;
+  /* Make the entire item clickable */
   transition: background-color 0.3s ease;
 }
 
 .faq-item:hover {
-  background-color: #f0f0f0;  /* Add a subtle hover effect */
+  background-color: #f0f0f0;
+  /* Add a subtle hover effect */
 }
 
 .faq-question {
@@ -421,7 +451,8 @@ input[type="range"].slider-progress {
 }
 
 .faq-item.active .faq-question {
-  color: #007aff;  /* Change color when active */
+  color: #007aff;
+  /* Change color when active */
 }
 
 /* Plus/Minus Icon */
@@ -447,19 +478,23 @@ input[type="range"].slider-progress {
 }
 
 .faq-icon::before {
-  transform: rotate(0); /* Vertical line of plus */
+  transform: rotate(0);
+  /* Vertical line of plus */
 }
 
 .faq-icon::after {
-  transform: rotate(90deg); /* Horizontal line of plus */
+  transform: rotate(90deg);
+  /* Horizontal line of plus */
 }
 
 .faq-item.active .faq-icon::before {
-  opacity: 0; /* Hide vertical line to turn plus into minus */
+  opacity: 0;
+  /* Hide vertical line to turn plus into minus */
 }
 
 .faq-item.active .faq-icon::after {
-  transform: rotate(0); /* Horizontal line becomes minus */
+  transform: rotate(0);
+  /* Horizontal line becomes minus */
 }
 
 /* FAQ Answer */
@@ -479,7 +514,8 @@ input[type="range"].slider-progress {
 
 .faq-item.active .faq-answer {
   opacity: 1;
-  max-height: 500px; /* Adjust height as needed */
+  max-height: 500px;
+  /* Adjust height as needed */
 }
 
 /* Footer Styles */
@@ -491,15 +527,19 @@ input[type="range"].slider-progress {
   color: #333;
   font-size: 14px;
   margin-top: 50px;
-  box-sizing: border-box;  /* Include padding in width calculation */
-  overflow-x: hidden;  /* Prevent horizontal overflow */
+  box-sizing: border-box;
+  /* Include padding in width calculation */
+  overflow-x: hidden;
+  /* Prevent horizontal overflow */
 }
 
 /* Footer Links */
 .footer-links {
   margin-top: 10px;
-  display: inline-block;  /* Ensure the links don't stretch */
-  box-sizing: border-box;  /* Include padding in width */
+  display: inline-block;
+  /* Ensure the links don't stretch */
+  box-sizing: border-box;
+  /* Include padding in width */
 }
 
 .footer a {
@@ -522,7 +562,8 @@ input[type="range"].slider-progress {
 @media (max-width: 768px) {
   .navbar {
     display: flex;
-    justify-content: space-between;  /* Ensure logo on left and menu on right */
+    justify-content: space-between;
+    /* Ensure logo on left and menu on right */
     align-items: center;
     padding: 15px 20px;
   }
@@ -533,30 +574,35 @@ input[type="range"].slider-progress {
   }
 
   .cta-button {
-    width: 100%;  /* Ensure button takes full width on mobile */
+    width: 100%;
+    /* Ensure button takes full width on mobile */
     margin-top: 10px;
     text-align: center;
   }
 
   .logo a {
-    font-size: 20px; /* Slightly reduce logo font size for mobile */
+    font-size: 20px;
+    /* Slightly reduce logo font size for mobile */
   }
 
   .logo svg {
-    width: 120px;  /* Adjust width for mobile */
+    width: 120px;
+    /* Adjust width for mobile */
   }
 }
 
 /* Responsive Hero Section */
 @media (max-width: 768px) {
   .hero-section {
-    height: auto;  /* Allow height to adjust based on content */
+    height: auto;
+    /* Allow height to adjust based on content */
     padding: 40px 20px;
   }
 
   .hero-section h1 {
     font-size: 2rem;
-    word-wrap: break-word;  /* Ensure long words break and don't cause overflow */
+    word-wrap: break-word;
+    /* Ensure long words break and don't cause overflow */
   }
 
   .hero-section p {
@@ -569,25 +615,30 @@ input[type="range"].slider-progress {
 /* Responsive Salary Calculator */
 @media (max-width: 768px) {
   .container {
-    padding: 15px 20px;  /* Ensure consistent padding on mobile */
+    padding: 15px 20px;
+    /* Ensure consistent padding on mobile */
     max-width: calc(100% - 44px);
-    margin: 50px 20px;  /* Prevent the container from touching the screen edges */
+    margin: 50px 20px;
+    /* Prevent the container from touching the screen edges */
   }
 
   .form-group label {
-    font-size: 14px;  /* Adjust label size for mobile */
+    font-size: 14px;
+    /* Adjust label size for mobile */
   }
 
   .input-field {
     padding: 10px;
-    font-size: 14px;  /* Slightly smaller input field text for mobile */
+    font-size: 14px;
+    /* Slightly smaller input field text for mobile */
   }
 
   .button {
     padding: 12px;
-    font-size: 14px;  /* Reduce button size slightly for mobile */
+    font-size: 14px;
+    /* Reduce button size slightly for mobile */
   }
-  
+
   .slider-label {
     font-size: 14px;
     color: #333;
@@ -643,20 +694,25 @@ input[type="range"].slider-progress {
 /* Responsive FAQ Section */
 @media (max-width: 768px) {
   .faq-section {
-    padding: 15px 20px;  /* Adjust padding for mobile */
-    max-width: 100%;  /* Ensure full width on mobile */
+    padding: 15px 20px;
+    /* Adjust padding for mobile */
+    max-width: 100%;
+    /* Ensure full width on mobile */
   }
 
   .faq-section h2 {
-    font-size: 1.75rem;  /* Reduce heading size slightly */
+    font-size: 1.75rem;
+    /* Reduce heading size slightly */
   }
 
   .faq-question {
-    font-size: 1.125rem;  /* Slightly smaller font size for mobile */
+    font-size: 1.125rem;
+    /* Slightly smaller font size for mobile */
   }
 
   .faq-answer p {
-    font-size: 0.9rem;  /* Reduce paragraph text size for mobile */
+    font-size: 0.9rem;
+    /* Reduce paragraph text size for mobile */
   }
 }
 
@@ -705,13 +761,9 @@ input[type="range"].slider-progress {
 .benefit-card {
   background-color: #fff;
   border-radius: 12px;
-  padding: 20px;
+  padding: 32px 20px 20px 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-}
-
-.benefit-card:hover {
-  transform: translateY(-5px);
 }
 
 .benefit-card h3 {
@@ -729,7 +781,8 @@ input[type="range"].slider-progress {
 
 .benefit-icon {
   font-size: 36px;
-  color: #007aff;  /* Apple-like blue */
+  color: #007aff;
+  /* Apple-like blue */
   margin-bottom: 15px;
 }
 
