@@ -569,8 +569,9 @@ input[type="range"].slider-progress {
 /* Responsive Salary Calculator */
 @media (max-width: 768px) {
   .container {
-    padding: 20px 15px;  /* Ensure consistent padding on mobile */
-    max-width: calc(100% - 44px);  /* Prevent the container from touching the screen edges */
+    padding: 15px 20px;  /* Ensure consistent padding on mobile */
+    max-width: calc(100% - 44px);
+    margin: 50px 20px;  /* Prevent the container from touching the screen edges */
   }
 
   .form-group label {
@@ -642,7 +643,7 @@ input[type="range"].slider-progress {
 /* Responsive FAQ Section */
 @media (max-width: 768px) {
   .faq-section {
-    padding: 20px 15px;  /* Adjust padding for mobile */
+    padding: 15px 20px;  /* Adjust padding for mobile */
     max-width: 100%;  /* Ensure full width on mobile */
   }
 
@@ -662,7 +663,7 @@ input[type="range"].slider-progress {
 /* Responsive Footer */
 @media (max-width: 768px) {
   .footer {
-    padding: 20px 15px;
+    padding: 15px 20px;
     box-sizing: border-box;
   }
 
@@ -677,5 +678,76 @@ input[type="range"].slider-progress {
 
   .footer-links a {
     font-size: 14px;
+  }
+}
+
+/* Why Choose Fundi Section */
+.why-choose-fundi {
+  max-width: 1080px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.why-choose-fundi h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: 600;
+  color: #333;
+}
+
+.benefits-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.benefit-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+}
+
+.benefit-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: 600;
+}
+
+.benefit-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.benefit-icon {
+  font-size: 36px;
+  color: #007aff;  /* Apple-like blue */
+  margin-bottom: 15px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .why-choose-fundi h2 {
+    font-size: 2rem;
+  }
+
+  .benefits-container {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit-card {
+    padding: 30px 20px 20px 20px;
+  }
+
+  .benefit-icon {
+    font-size: 30px;
   }
 }
